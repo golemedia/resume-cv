@@ -1,0 +1,438 @@
+<!--
+ ┌──────────────────────────────────────────────────────────────────────┐
+ │ @name         CV generator                                           │
+ │ @description  Resume CV with dark/light mode and PDF export          │
+ └──────────────────────────────────────────────────────────────────────┘
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Timothy Hoffpauir Resume/CV</title>
+
+        <!-- Import Fontawesome -->
+        <script src="https://kit.fontawesome.com/cb81440751.js" crossorigin="anonymous"></script>
+
+        <!-- Import stylesheets in CSS3 -->
+        <link rel="stylesheet" href="assets/stylesheets/style.css" type="text/css">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/pictures/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/pictures/favicon/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/pictures/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/pictures/favicon/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="assets/pictures/favicon/android-chrome-512x512.png">
+    </head>
+
+    <body>
+        <header class="l-header" id="header">
+            <!-- Nav menu -->
+            <nav class="nav bd-container">
+                <a href="#" class="nav_logo">Timothy Hoffpauir</a>
+                <div class="nav_menu" id="nav-menu">
+                    <ul class="nav_list">
+
+                        <li class="nav_item">
+                            <a href="#home" class="nav_link active-link">
+                                <i class="fa-solid fa-house nav_icon"></i>Home
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a href="#profile" class="nav_link">
+                                <i class="fa-solid fa-user nav_icon"></i>Profile
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a href="#skills" class="nav_link">
+                                <i class="fa-solid fa-computer nav_icon"></i>Skills
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a href="#languages" class="nav_link">
+                                <i class="fa-solid fa-comments nav_icon"></i>Languages
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a href="#experience" class="nav_link">
+                                <i class="fa-solid fa-briefcase nav_icon"></i>Experiences
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a href="#certificates" class="nav_link">
+                                <i class="fa-solid fa-graduation-cap nav_icon"></i>Certificates
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a href="#education" class="nav_link">
+                                <i class="fa-solid fa-book-bookmark nav_icon"></i>Education
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a href="#interests" class="nav_link">
+                                <i class="fa-solid fa-icons nav_icon"></i>Interests
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="nav_toggle" id="nav-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main bd-container">
+            <!-- Resume CV -->
+            <div class="resume" id="area-cv">
+                <div class="resume_left">
+
+                    <!-- HOME -->
+                    <section class="home" id="home">
+                        <div class="home_container section bd-grid">
+
+                            <div class="home_data bd-grid">
+                                <img src="assets/pictures/profile.png" alt="Icon picture" class="home_img" id="home-img">
+                                <!--<img alt="Icon picture" class="home_img" id="home-img">-->
+                                <h1 class="home_title">Timothy <b>Hoffpauir</b></h1>
+                                <h3 class="home_profession">System / Process<br />Developer</h3>
+                                <div>
+                                    <a download="" id="download-button" class="home_button-movil">Download</a>
+                                </div>
+                            </div>
+
+                            <div class="home_address bd-grid">
+                                <span class="home_information">
+                                    <i class="fa-solid fa-location-dot home_icon"></i> Waco, TX - USA
+                                </span>
+                                <span class="home_information">
+                                    <a href="mailto:timothy.hoffpauir@golemedia.net" class="home_link">
+                                        <i class="fa-solid fa-envelope home_icon"></i> timothy.hoffpauir@golemedia.net
+                                    </a>
+                                </span>
+                                <span class="home_information">
+                                    <a href="tel:2068598110" class="home_link">
+                                        <i class="fa-solid fa-phone home_icon"></i> 206.859.8110
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Theme change button -->
+                        <i class="fa-solid fa-moon change-theme" title="Theme" id="theme-button"></i>
+
+                        <!-- Button to generate and download the pdf. Available for desktop. -->
+                        <i class="fa-solid fa-download generate-pdf" title="Generate PDF" id="resume-button"></i>
+
+                    </section>
+
+                    <!-- SOCIAL -->
+                    <section class="social section">
+                        <h2 class="section-title">Social</h2>
+
+                        <div class="social_container bd-grid">
+                            <a href="https://github.com/golemedia" target="_blank" class="social_link">
+                                <i class="fa-brands fa-github social_icon"></i> @golemedia
+                            </a>
+                            <a href="https://bsky.app/profile/golemedia.net" target="_blank" class="social_link">
+                                <i class="fa-brands fa-bluesky social_icon"></i> @golemedia.net
+                            </a>
+                            <a href="https://www.linkedin.com/in/timothy-hoffpauir/" target="_blank" class="social_link">
+                                <i class="fa-brands fa-linkedin social_icon"></i> timothy-hoffpauir
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- PROFILE -->
+                    <section class="profile section" id="profile">
+                        <h2 class="section-title">Profile</h2>
+
+                        <p class="profile_description">
+                            I'm actually a student in computer science at the University of Le Havre Normandie. This year is
+                            my last year of master's degree in computer science at the university. But this year I also
+                            joined the IES Ingénierie team by becoming an analyst developer in work-study training.
+                        </p>
+                    </section>
+
+                    <!-- SKILLS  -->
+                    <section class="skills section" id="skills">
+                        <h2 class="section-title">Skills</h2>
+                        <div class="skills_container">
+                            <div class="skills_content bd-grid">
+                                <div class="skills_name">
+                                    <span class="skills_text">Networking</span>
+                                    <div class="skills_box">
+                                        <span class="skills_progress" style="width: 75%;"></span>
+                                    </div>
+                                </div>
+                                <div class="skills_name">
+                                    <span class="skills_text">System Dev</span>
+                                    <div class="skills_box">
+                                        <span class="skills_progress" style="width: 85%;"></span>
+                                    </div>
+                                </div>
+                                <div class="skills_name">
+                                    <span class="skills_text">LEAN Process</span>
+                                    <div class="skills_box">
+                                        <span class="skills_progress" style="width: 98%;"></span>
+                                    </div>
+                                </div>
+                                <div class="skills_name">
+                                    <span class="skills_text">ABLE Process</span>
+                                    <div class="skills_box">
+                                        <span class="skills_progress" style="width: 90%;"></span>
+                                    </div>
+                                </div>
+                                <div class="skills_name">
+                                    <span class="skills_text">Python</span>
+                                    <div class="skills_box">
+                                        <span class="skills_progress" style="width: 70%;"></span>
+                                    </div>
+                                </div>
+                                <div class="skills_name">
+                                    <span class="skills_text">SQL / MySQL</span>
+                                    <div class="skills_box">
+                                        <span class="skills_progress" style="width: 75%;"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </section>
+                    
+                    <!-- LANGUAGES 
+                    <section class="languages section" id="languages">
+                        <h2 class="section-title">Languages</h2>
+
+                        <div class="languages_container">
+                            <ul class="languages_content bd-grid">
+                                <li class="languages_name">
+                                    <span class="languages_text">French</span>
+                                    <span class="languages_stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                </li>
+                                <li class="languages_name">
+                                    <span class="languages_text">English</span>
+                                    <span class="languages_stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star languages_stars_checked"></i>
+                                        <i class="fa-solid fa-star languages_stars_checked"></i>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    -->
+                </div>
+
+                <div class="resume_right">
+
+                    <!-- EXPERIENCE -->
+                    <section class="experience section" id="experience">
+                        <h2 class="section-title">Experience</h2>
+
+                        <div class="experience_container bd-grid">
+
+                            <div class="experience_content">
+                                <div class="experience_time">
+                                    <span class="experience_rounder"></span>
+                                </div>
+                                <div class="experience_data bd-grid">
+                                    <h3 class="experience_title">FIELD SERVICE TECHNICIAN</h3>
+                                    <span class="experience_company">Field Services | FedEx Office - Seattle, WA</span>
+                                    <span class="experience_year">September 2019 - May 2025</span>
+                                    <p class="experience_description">
+                                        Work in this company dedicating the best responsibility in the area that
+                                        corresponds, delivering the best results for the company and improving productivity.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="experience_content">
+                                <div class="experience_time">
+                                    <span class="experience_rounder"></span>
+                                </div>
+                                <div class="experience_data bd-grid">
+                                    <h3 class="experience_title">DATA SHIPPING SPECIALIST</h3>
+                                    <span class="experience_company">Digital Production Plant | FedEx Office - Kent, WA</span>
+                                    <span class="experience_year">December 2012 - September 2019</span>
+                                    <p class="experience_description">
+                                        Work in this company dedicating the best responsibility in the area that
+                                        corresponds, delivering the best results for the company and improving productivity.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="experience_content">
+                                <div class="experience_time">
+                                    <span class="experience_rounder"></span>
+                                </div>
+                                <div class="experience_data bd-grid">
+                                    <h3 class="experience_title">LEAD PRODUCTION COORDINATOR</h3>
+                                    <span class="experience_company">Digital Production Plant | FedEx Office - Kent, WA</span>
+                                    <span class="experience_year">November 2008 - December 2012</span>
+                                    <p class="experience_description">
+                                        Work in this company dedicating the best responsibility in the area that
+                                        corresponds, delivering the best results for the company and improving productivity.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="experience_content">
+                                <div class="experience_time">
+                                    <span class="experience_rounder"></span>
+                                </div>
+                                <div class="experience_data bd-grid">
+                                    <h3 class="experience_title">AUTOMOTIVE TECHNICIAN</h3>
+                                    <span class="experience_company">Diagnostics &Aacute; Repair | Various - Kent, WA</span>
+                                    <span class="experience_year">September 2005 - October 2008</span>
+                                    <p class="experience_description">
+                                        Work in this company dedicating the best responsibility in the area that
+                                        corresponds, delivering the best results for the company and improving productivity.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="experience_content">
+                                <div class="experience_time">
+                                    <span class="experience_rounder"></span>
+                                </div>
+                                <div class="experience_data bd-grid">
+                                    <h3 class="experience_title">LEAD WEB PROGRAMMER</h3>
+                                    <span class="experience_company">Systems Development | Electronic Financial Group - Waco, TX</span>
+                                    <span class="experience_year">October 1998 - May 2002</span>
+                                    <p class="experience_description">
+                                        Work in this company dedicating the best responsibility in the area that
+                                        corresponds, delivering the best results for the company and improving productivity.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </section>
+
+                    <!-- CERTIFICATES -->
+                    <section class="certificate section" id="certificates">
+                        <h2 class="section-title">Certificates</h2>
+
+                        <div class="certificate_container bd-grid">
+                            <div class="certificate_content">
+                                <div class="certificate_item">
+                                    <span class="certificate_rounder"></span>
+                                </div>
+                                <div class="certificate_data bd-grid">
+                                    <h3 class="certificate_year">2025</h3>
+                                    <span class="certificate_title">CompTIA A+ Certification</span>
+                                </div>
+                            </div>
+                            <div class="certificate_content">
+                                <div class="certificate_item">
+                                    <span class="certificate_rounder"></span>
+                                </div>
+                                <div class="certificate_data bd-grid">
+                                    <h3 class="certificate_year">2023</h3>
+                                    <span class="certificate_title">QuickBase App Builder Certification</span>
+                                </div>
+                            </div>
+                            <div class="certificate_content">
+                                <div class="certificate_item">
+                                    <span class="certificate_rounder"></span>
+                                </div>
+                                <div class="certificate_data bd-grid">
+                                    <h3 class="certificate_year">2017</h3>
+                                    <span class="certificate_title">QDM LEAN Expert Certification</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- EDUCATION -->
+                    <section class="education section" id="education">
+                        <h2 class="section-title">Education</h2>
+
+                        <div class="education_container bd-grid">
+                            <div class="education_content">
+                                <div class="education_time">
+                                    <span class="education_rounder"></span>
+                                    <span class="education_line"></span>
+                                </div>
+                                <div class="education_data bd-grid">
+                                    <h3 class="education_title">Associate of Applied Science</h3>
+                                    <span class="education_studies">Texas State Technical Institute - Waco</span>
+                                    <span class="education_year">2004 - 2005</span>
+                                </div>
+                            </div>
+                            
+                            <div class="education_content">
+                                <div class="education_time">
+                                    <span class="education_rounder"></span>
+                                </div>
+                                <div class="education_data bd-grid">
+                                    <h3 class="education_title">High School Diploma</h3>
+                                    <span class="education_studies">Waco High School - Waco</span>
+                                    <span class="education_year">1991 - 1994</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- INTERESTS -->
+                    <section class="interests section" id="interests">
+                        <h2 class="section-title">Interests</h2>
+                        <div class="interests_container bd-grid">
+                            <div class="interests_content">
+                                <i class="fa-solid fa-microchip interests_icon"></i>
+                                <span class="interests_name">Electronics / IoT</span>
+                            </div>
+                            <div class="interests_content">
+                                <i class="fa-solid fa-gears interests_icon"></i>
+                                <span class="interests_name">3D Printing</span>
+                            </div>
+                            <div class="interests_content">
+                                <i class="fa-solid fa-code interests_icon"></i>
+                                <span class="interests_name">Programming</span>
+                            </div>
+                            <div class="interests_content">
+                                <i class="fa-solid fa-leaf interests_icon"></i>
+                                <span class="interests_name">Nature</span>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </main>
+
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class="fa-solid fa-arrow-up scrolltop_icon"></i>
+        </a>
+
+        <!-- HTML2PDF.js -->
+            <!-- Version 0.8.0 -->
+        <!-- <script src="assets/javascripts/html2pdf.v0.8.0.bundle.min.js"></script> -->
+            <!-- Version 0.9.3 -->
+        <script src="assets/javascripts/html2pdf.v0.9.3.bundle.min.js"></script>
+
+        <!-- Main Javascript file -->
+        <script src="assets/javascripts/main.js"></script>
+    </body>
+
+</html>
